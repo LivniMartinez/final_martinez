@@ -10,7 +10,7 @@ create table programadores (
 
 create table grados (
     gra_id serial not null,
-    gra_nombre varchar(30) not null,
+    gra_nombre varchar(50) not null,
     gra_sit char (1) DEFAULT '1',
     primary key (gra_id)
 );
