@@ -6,7 +6,7 @@ require '../../modelos/Grados.php';
         $grado = new Grado($_GET);
         
         $grados = $grado->buscar();
-        var_dump($grados);
+//        var_dump($grados);
     } catch (PDOException $e) {
         $error = $e->getMessage();
     } catch (Exception $e2){

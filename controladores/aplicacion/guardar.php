@@ -7,7 +7,7 @@ if($_POST['app_nombre'] != '' ){
 
     try {
         $aplicacion = new Aplicacion($_POST);
-        var_dump($aplicacion);
+//        var_dump($aplicacion);
         $resultado = $aplicacion->guardar();
         $error = "NO se guardó correctamente";
     } catch (PDOException $e) {
