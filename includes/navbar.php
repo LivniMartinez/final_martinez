@@ -11,14 +11,27 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Grados
+                    Grado y Arma
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
-                            <a class="nav-link" href="/final_martinez/vistas/grados/index.php">Crear Grado</a>
+                            <a class="nav-link" href="/final_martinez/vistas/grados/index.php">Crear Grado/Arma</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/final_martinez/vistas/grados/buscar.php">Buscar Grado</a>
+                            <a class="nav-link" href="/final_martinez/vistas/grados/buscar.php">Buscar Grado/Arma</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Programador
+                    </a>
+                    <ul class="dropdown-menu bg-dark">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/final_martinez/vistas/programadores/index.php">Crear Programador/Arma</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/final_martinez/vistas/programadores/buscar.php">Buscar Programador</a>
                         </li>
                     </ul>
                 </li>
@@ -28,7 +41,7 @@
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
-                            <a class="nav-link" href="/final_martinez/vistas/aplicaciones/index.php">Guardar aplicacion</a>
+                            <a class="nav-link" href="/final_martinez/vistas/aplicaciones/index.php">Crear aplicacion</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/final_martinez/vistas/aplicaciones/buscar.php">Buscar aplicacion</a>
@@ -37,14 +50,14 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    tareas
+                    Tareas
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
-                            <a class="nav-link" href="/final_martinez/vistas/tareas/index.php">Guardar Tarea</a>
+                            <a class="nav-link" href="/final_martinez/vistas/tareas/index.php">Crear Tarea</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/final_martinez/vistas/tareas/buscar.php">Buscar aplicacion</a>
+                            <a class="nav-link" href="/final_martinez/vistas/tareas/buscar.php">Buscar Tarea</a>
                         </li>
                     </ul>
                 </li>
