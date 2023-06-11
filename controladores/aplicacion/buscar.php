@@ -43,8 +43,8 @@ try {
                         <tr>
                             <td><?= $key + 1 ?></td>
                             <td><?= $app['APP_NOMBRE'] ?></td>
-                            <td><a class="btn btn-warning w-100" href="/parcial_martinez/vistas/aplicaciones/modificar.php?app_id=<?= $app['APP_ID']?>">Modificar</a></td>
-                            <td><a class="btn btn-danger w-100" href="/parcial_martinez/controladores/aplicacion/eliminar.php?app_id=<?= $app['APP_ID']?>">Eliminar</a></td>
+                            <td><a class="btn btn-warning w-100" href="/final_martinez/vistas/aplicaciones/modificar.php?app_id=<?= $app['APP_ID']?>">Modificar</a></td>
+                            <td><a class="btn btn-danger w-100" href="/final_martinez/controladores/aplicacion/eliminar.php?app_id=<?= $app['APP_ID']?>">Eliminar</a></td>
                         </tr>
                         <?php endforeach ?>
                         <?php else :?>
@@ -58,7 +58,7 @@ try {
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-4">
-                <a href="/parcial_martinez/vistas/aplicaciones/buscar.php" class="btn btn-info w-100">Volver al formulario</a>
+                <a href="/final_martinez/vistas/aplicaciones/buscar.php" class="btn btn-info w-100">Volver al formulario</a>
             </div>
         </div>
     </div>
