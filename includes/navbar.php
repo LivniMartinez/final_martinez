@@ -50,6 +50,19 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Asignación de APP
+                    </a>
+                    <ul class="dropdown-menu bg-dark">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/final_martinez/vistas/asig_app/index.php">Crear Asignación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/final_martinez/vistas/asig_app/buscar.php">Buscar Asignación</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Tareas
                     </a>
                     <ul class="dropdown-menu bg-dark">
