@@ -1,4 +1,4 @@
-CREATE TABLE programadores (
+create table programadores (
     prog_id serial NOT NULL PRIMARY KEY,
     prog_correo varchar(50),
     prog_grado int, 
@@ -15,7 +15,6 @@ create table grados (
     primary key (gra_id)
 );
 
-
 Create table asig_programador (
 asig_id serial primary key,
 asig_programador int not null,
@@ -26,7 +25,6 @@ foreign key (asig_app) REFERENCES aplicaciones (app_id)
 );
 
 Create table aplicaciones (
-
 app_id serial not null primary key,
 app_nombre varchar (50) not null,
 app_estado int
