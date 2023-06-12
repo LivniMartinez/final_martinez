@@ -29,7 +29,7 @@
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
-                            <a class="nav-link" href="/final_martinez/vistas/aplicaciones/index.php">Guardar aplicacion</a>
+                            <a class="nav-link" href="/final_martinez/vistas/aplicaciones/index.php">Crear aplicacion</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/final_martinez/vistas/aplicaciones/buscar.php">Buscar aplicacion</a>
@@ -42,7 +42,7 @@
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
-                            <a class="nav-link" href="/final_martinez/vistas/tareas/index.php">Guardar Tarea</a>
+                            <a class="nav-link" href="/final_martinez/vistas/tareas/index.php">Crear Tarea</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/final_martinez/vistas/tareas/buscar.php">Buscar Tarea</a>
@@ -68,7 +68,7 @@
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
-                            <a class="nav-link" href="/final_martinez/vistas/asignar/index.php"> asignar</a>
+                            <a class="nav-link" href="/final_martinez/vistas/asignar/index.php"> Asignar aplicación</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/final_martinez/vistas/asignar/buscar.php">Buscar asignaciones</a>
@@ -79,7 +79,14 @@
                     <a class="nav-link " href="/final_martinez/vistas/detalle/index.php" >
                         Detalle app
                     </a>
-                   
+                    <ul class="dropdown-menu bg-dark">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/final_martinez/vistas/detalle/index.php">Registro de detalle </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/final_martinez/vistas/detalle/buscar.php">Buscar detalles apps</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>
