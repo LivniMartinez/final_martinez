@@ -33,7 +33,7 @@ try {
 ?>
 
 <div class="container mt-5">
-  <h1 class="text-center mt-3">ASIGNACIÓN DE TAREAS</h1>
+  <h1 class="text-center mt-3">ASIGNACIÓN DE APLICACIONES</h1>
   <div class="row justify-content-center mt-2">
     <form action="/final_martinez/controladores/asignar/guardar.php" method="POST" class="border border-primary rounded p-3 bg-light col-md-6">
       <div class="form-group">
