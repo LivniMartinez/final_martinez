@@ -1,10 +1,13 @@
 <?php
 require '../../modelos/Tareas.php';
 require '../../modelos/Aplicacion.php';
+//var_dump($_REQUEST);    
 
 try {
-    $tarea = new Tareas($_GET);
-    $Tareas = $tarea->buscar();
+    $tarea = new Tareas($_REQUEST);
+   // var_dump($tarea);
+    $Tareas = $tarea->buscartar_id();
+   // var_dump($Tareas);
 } catch (PDOException $e) {
     $error = $e->getMessage();
 } catch (Exception $e2) {
@@ -12,34 +15,18 @@ try {
 }
 
 
-try {
-      
-    $app = new Aplicacion($_GET);
-    
-    $Aplicacion = $app->buscar();
-   //var_dump($Aplicacion);
-} catch (PDOException $e) {
-    $error = $e->getMessage();
-} catch (Exception $e2){
-    $error = $e2->getMessage();
-}
+
 ?>
 
 <?php include_once '../../includes/header.php' ?>
 <div class="container">
     <h1 class="text-center">Modificar Tareas</h1>
     <div class="row justify-content-center">
-        <form action="/final_martinez/controladores/tareas/modificar.php" method="POST" class="col-lg-8 border bg-light p-3">
+        <form action="/final_martinez/controladores/detalle/modificar.php" method="POST" class="col-lg-8 border bg-light p-3">
             <input type="hidden" name="tar_id" id="tar_id" value="<?= $Tareas[0]['TAR_ID'] ?>">
+            <input type="hidden" name="tar_app" id="tar_app" value="<?= $Tareas[0]['TAR_APP'] ?>">
             <div class="row mb-3">
-                <div class="col">
-                    <label for="aplicacion">Aplicación</label>
-                    <select name="tar_app" id="tar_app" class="form-select" required>
-                        <?php foreach ($Aplicacion as $app) : ?>
-                            <option value="<?= $app['APP_ID'] ?>" <?= ($app['APP_NOMBRE'] === $Tareas[0]['APP_NOMBRE']) ? 'selected' : '' ?>><?= $app['APP_NOMBRE'] ?></option>
-                        <?php endforeach; ?>
-                    </select>
-                </div>
+           
             </div>
             <div class="row mb-3">
                 <div class="col">
@@ -49,8 +36,12 @@ try {
             </div>
             <div class="row mb-3">
                 <div class="col">
-                    <label for="fecha_asignacion">Fecha de Asignación</label>
-                    <input type="date" name="tar_fecha" id="tar_fecha" value="<?= $Tareas[0]['TAR_FECHA'] ?>" class="form-control" required>
+                    <label for="estado">Estado</label>
+                    <select name="tar_estado" id="tar_estado" class="form-control" required>
+                        <option value="1" <?php if ($Tareas[0]['TAR_ESTADO'] == 1) echo 'selected' ?>>NO INICIADO</option>
+                        <option value="2" <?php if ($Tareas[0]['TAR_ESTADO'] == 2) echo 'selected' ?>>EN PROCESO</option>
+                        <option value="3" <?php if ($Tareas[0]['TAR_ESTADO'] == 3) echo 'selected' ?>>FINALIZADO</option>
+                    </select>
                 </div>
             </div>
             <div class="row mb-3">
@@ -61,4 +52,5 @@ try {
         </form>
     </div>
 </div>
+
 <?php include_once '../../includes/footer.php' ?>

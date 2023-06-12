@@ -82,6 +82,7 @@ try {
             <th scope="col" class="text-center">Nombre</th>
             <th scope="col" class="text-center">Fecha</th>
             <th scope="col" class="text-center">Estado</th>
+            <th scope="col" class="text-center">Cambio</th>
         </tr>
     </thead>
     <tbody>
@@ -112,6 +113,7 @@ try {
                         ?>
                         <span class="badge <?= $estadoClass ?>"><?= $estado ?></span>
                     </td>
+                  <td><a class="btn btn-warning w-100" href="/final_martinez/vistas/detalle/modificar.php?tar_id=<?=$tar['TAR_ID']?>">Modificar</a></td>
                 </tr>
             <?php endforeach; ?>
         <?php else : ?>

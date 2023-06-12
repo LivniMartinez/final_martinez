@@ -61,10 +61,32 @@ class Tareas extends Conexion {
         $resultado = self::servir($sql);
         return $resultado;
     }
+
+    public function buscartar_id() {
+        // return "hola";
+        // exit;
+        $sql = "select * from tareas  WHERE tar_id = $this->tar_id ";
+
+  
+        $resultado = self::servir($sql);
+        return $resultado;
+    }
+
+
     public function modificar() {
         $sql = "UPDATE tareas 
                 SET tar_app = '$this->tar_app', tar_descripcion = '$this->tar_descripcion', 
                     tar_fecha = '$this->tar_fecha', tar_estado = '$this->tar_estado' 
+                WHERE tar_id = $this->tar_id";
+        
+        $resultado = self::ejecutar($sql);
+        return $resultado;
+    }
+
+    
+    public function cambio() {
+        $sql = "UPDATE tareas 
+                SET  tar_estado = '$this->tar_estado' 
                 WHERE tar_id = $this->tar_id";
         
         $resultado = self::ejecutar($sql);
