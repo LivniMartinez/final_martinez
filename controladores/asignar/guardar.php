@@ -62,7 +62,7 @@ if (!empty($_POST['asig_app'])) {
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <a href="/final_martinez/vistas/grados/index.php" class="btn btn-info">Volver al formulario</a>
+                <a href="/final_martinez/vistas/asignar/index.php" class="btn btn-info">Volver al formulario</a>
             </div>
         </div>
     </div>
