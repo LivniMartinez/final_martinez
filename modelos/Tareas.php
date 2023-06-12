@@ -24,7 +24,7 @@ class Tareas extends Conexion {
     }
 
     public function buscar() {
-        $sql = "SELECT * FROM tareas WHERE 1=1";
+        $sql = "select tar_id, app_nombre, tar_descripcion, tar_fecha from tareas inner join aplicaciones on tar_app = app_id ";
 
         if ($this->tar_id != null) {
             $sql .= " AND tar_id = $this->tar_id";
@@ -50,6 +50,17 @@ class Tareas extends Conexion {
         return $resultado;
     }
 
+
+    
+    public function buscartar() {
+        // return "hola";
+        // exit;
+        $sql = "select * from tareas  WHERE tar_app = $this->tar_app ";
+
+      
+        $resultado = self::servir($sql);
+        return $resultado;
+    }
     public function modificar() {
         $sql = "UPDATE tareas 
                 SET tar_app = '$this->tar_app', tar_descripcion = '$this->tar_descripcion', 
