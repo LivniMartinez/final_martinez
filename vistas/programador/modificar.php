@@ -8,7 +8,7 @@ require '../../modelos/Grados.php';
 try {
     $tarea = new Programadores($_GET);
     $Programadores = $tarea->buscar2();
-   var_dump($Programadores);
+   //var_dump($Programadores);
 } catch (PDOException $e) {
     $error = $e->getMessage();
 } catch (Exception $e2) {
@@ -27,11 +27,11 @@ try {
 ?>
 
 <div class="container mt-5">
-    <h1 class="text-center mt-3">MODIFICAR PROGRAMADOR</h1>
+    <h1 class="text-center mt-3">Formulario para modificar el Programador</h1>
     <div class="row justify-content-center mt-2">
         <form action="/final_martinez/controladores/programadores/modificar.php" method="POST" class="border border-primary rounded p-3 bg-light col-md-6">
             <div class="form-group mb-3">
-                <label for="prog_nombre" class="fs-5">Nombre:</label>
+                <label for="prog_nombre" class="fs-5">Nombres:</label>
                 <input type="hidden" class="form-control" name="prog_id" id="prog_id" value="<?= $Programadores[0]['PROG_ID'] ?? '' ?>" required>
                 <input type="text" class="form-control" name="prog_nombres" id="prog_nombres" value="<?= $Programadores[0]['PROG_NOMBRES'] ?? '' ?>" required>
             </div>
