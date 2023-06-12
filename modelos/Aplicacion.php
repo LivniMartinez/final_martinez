@@ -39,8 +39,47 @@ class Aplicacion extends Conexion{
         return $resultado;
     }
 
+
+    public function buscart(){
+        $sql = "SELECT * FROM aplicaciones WHERE app_estado in (1,2,3,4,5)";
+
+        if($this->app_nombre != ''){
+            $sql .= " AND app_nombre LIKE '%$this->app_nombre%'";
+        }
+
+            if($this->app_id != null){
+            $sql .= " AND app_id = $this->app_id";
+        }
+
+        $resultado = self::servir($sql);
+        return $resultado;
+    }
+
+    public function buscarapp(){
+        $sql = "SELECT * FROM aplicaciones WHERE app_estado in (1,2,3,4,5) AND app_id = $this->app_id";
+
+
+
+        $resultado = self::servir($sql);
+        return $resultado;
+    }
+
+
+
+
+
     public function modificar(){
         $sql = "UPDATE aplicaciones SET app_nombre = '$this->app_nombre', app_estado = '$this->app_estado' WHERE app_id = $this->app_id";
+        
+        $resultado = self::ejecutar($sql);
+        return $resultado;
+    }
+
+
+
+    
+    public function modificar2(){
+        $sql = "UPDATE aplicaciones SET  app_estado = '$this->app_estado' WHERE app_id = $this->app_id";
         
         $resultado = self::ejecutar($sql);
         return $resultado;
