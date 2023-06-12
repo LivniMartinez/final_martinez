@@ -2,7 +2,7 @@
 require '../../modelos/Asignar.php';
 require '../../modelos/Aplicacion.php';
 
-//var_dump($_POST);
+var_dump($_POST);
 
 if (!empty($_POST['asig_app'])) {
     try {
