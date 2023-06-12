@@ -30,7 +30,7 @@ try {
                     </div>
                 <?php else :?>
                     <div class="alert alert-danger" role="alert">
-                        Ocurrió un error: <?= $error ?>
+                        Ocurrió un error: 
                     </div>
                 <?php endif ?>
             </div>
