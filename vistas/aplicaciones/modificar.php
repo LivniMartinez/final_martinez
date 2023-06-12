@@ -5,7 +5,7 @@ require '../../modelos/Aplicacion.php';
         $aplicacion = new Aplicacion($_GET);
         
         $app = $aplicacion->buscar();
-        var_dump($app);
+        //var_dump($app);
     } catch (PDOException $e) {
         $error = $e->getMessage();
     } catch (Exception $e2){
