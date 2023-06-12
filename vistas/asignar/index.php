@@ -22,7 +22,7 @@ try {
  
     
     $progras = $progra->buscar();
-    var_dump($progras);
+    //var_dump($progras);
 
 } catch (PDOException $e) {
     $error = $e->getMessage();
