@@ -47,7 +47,7 @@ try {
                 <td><?= $tar['APP_NOMBRE'] ?></td>
                 <td>
                     <?php if ($tar['APP_ESTADO'] == 2) { ?>
-                        <a class="btn btn-warning w-75%" href="/final_martinez/vistas/detalle/buscar.php?tar_id=<?= $tar['TAR_ID'] ?>"> ver</a>
+                        <a class="btn btn-warning w-75%" href="/final_martinez/vistas/detalle/buscar.php?tar_id=<?= $tar['APP_ID'] ?>"> ver</a>
                     <?php } else { ?>
                         no asignada aún
                     <?php } ?>
@@ -65,11 +65,7 @@ try {
                 </table>
             </div>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-4">
-                <a href="/final_martinez/vistas/tareas/buscar.php" class="btn btn-info w-100">Volver al formulario</a>
-            </div>
-        </div>
+      
     </div>
 </body>
 </html>
