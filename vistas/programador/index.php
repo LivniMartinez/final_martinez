@@ -12,11 +12,11 @@ try {
 }
 ?>
 <div class="container mt-5">
-    <h1 class="text-center mt-3">REGISTRAR PROGRAMADORES</h1>
+    <h1 class="text-center mt-3">Formulario del Registro de Programadores</h1>
     <div class="row justify-content-center mt-2">
         <form action="/final_martinez/controladores/programadores/guardar.php" method="POST" class="border border-primary rounded p-3 bg-light col-md-6">
             <div class="form-group mb-3">
-                <label for="prog_nombre" class="fs-5">Nombre:</label>
+                <label for="prog_nombre" class="fs-5">Nombres:</label>
                 <input type="text" class="form-control" name="prog_nombres" id="prog_nombres" required>
             </div>
             <div class="form-group mb-3">
@@ -24,9 +24,9 @@ try {
                 <input type="text" class="form-control" name="prog_apellidos" id="prog_apellidos" required>
             </div>
             <div class="form-group mb-3">
-                <label for="prog_grados" class="fs-5">Grado:</label>
+                <label for="prog_grados" class="fs-5">Grado y arma:</label>
                 <select class="form-select" name="prog_grado" id="prog_grado" required>
-                    <option value="">Seleccionar grado</option>
+                    <option value="">Seleccionar grado y arma</option>
                     <?php foreach ($Grados as $grado) : ?>
                         <option value="<?= $grado['GRA_ID'] ?>"><?= $grado['GRA_NOMBRE'] ?></option>
                     <?php endforeach; ?>
