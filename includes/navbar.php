@@ -45,7 +45,7 @@
                             <a class="nav-link" href="/final_martinez/vistas/tareas/index.php">Guardar Tarea</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/final_martinez/vistas/tareas/buscar.php">Buscar aplicacion</a>
+                            <a class="nav-link" href="/final_martinez/vistas/tareas/buscar.php">Buscar Tarea</a>
                         </li>
                     </ul>
                 </li>
