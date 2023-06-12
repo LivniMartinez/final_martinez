@@ -25,6 +25,19 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Programadores
+                    </a>
+                    <ul class="dropdown-menu bg-dark">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/final_martinez/vistas/programador/index.php">Registrar programador</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/final_martinez/vistas/programador/buscar.php">Buscar programador</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Aplicaciones
                     </a>
                     <ul class="dropdown-menu bg-dark">
@@ -46,19 +59,6 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/final_martinez/vistas/tareas/buscar.php">Buscar Tarea</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Programadores
-                    </a>
-                    <ul class="dropdown-menu bg-dark">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/final_martinez/vistas/programador/index.php">Registrar programador</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/final_martinez/vistas/programador/buscar.php">Buscar programador</a>
                         </li>
                     </ul>
                 </li>
