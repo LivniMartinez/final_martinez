@@ -58,7 +58,7 @@ try {
     $error = $e2->getMessage();
 }
 ?>
-mir awts
+
 <body>
     <div class="container border bg-light py-4 mt-4">
         <h1 class="mt-4">Detalle de Aplicación</h1>
