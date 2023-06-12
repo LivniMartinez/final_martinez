@@ -8,7 +8,7 @@ require '../../modelos/Grados.php';
 try {
     $tarea = new Programadores($_GET);
     $Programadores = $tarea->buscar2();
-   // var_dump($Programadores);
+   var_dump($Programadores);
 } catch (PDOException $e) {
     $error = $e->getMessage();
 } catch (Exception $e2) {

@@ -1,7 +1,6 @@
 <?php
 require '../../modelos/Aplicacion.php';
 
-var_dump($_POST);
 if($_POST['app_nombre'] != '' ){
 
 

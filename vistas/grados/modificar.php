@@ -1,4 +1,3 @@
-
 <?php
 require '../../modelos/Grados.php';
     try {
@@ -6,7 +5,7 @@ require '../../modelos/Grados.php';
         $grado = new Grado($_GET);
         
         $grados = $grado->buscar();
-//        var_dump($grados);
+        //var_dump($grados);
     } catch (PDOException $e) {
         $error = $e->getMessage();
     } catch (Exception $e2){
@@ -21,7 +20,7 @@ require '../../modelos/Grados.php';
                 <input type="hidden" name="gra_id" value="<?= $grados[0]['GRA_ID'] ?>" >
                 <div class="row mb-3">
                     <div class="col">
-                        <label for="gra_nombre">Grado del Oficial</label>
+                        <label for="gra_nombre">Nombre del cliente</label>
                         <input type="text" name="gra_nombre" id="gra_nombre" value="<?= $grados[0]['GRA_NOMBRE'] ?>" class="form-control" required>
                     </div>
                 </div>
