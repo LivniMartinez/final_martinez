@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <title>Login</title>
 </head>
-<body>
+<center><body>
 <!-- Contenedor formulario -->
 <section class="text-center"></section>
    <div class="container py-3">
@@ -50,7 +50,7 @@
                  <label class="form-label" for="password">Contraseña</label>
                </div>
                <!-- Redireccion al Inicio -->
-               <a href="" class="btn btn-primary btn-block mb-4" >Ingresar</a>
+               <a href="/final_martinez/vistas/grados/index.php" class="btn btn-primary btn-block mb-4" >Ingresar</a>
              </form>
            </div>
          </div>
@@ -66,5 +66,6 @@
             Copyright © 2023. Todos los derechos son reservados, creado por Livni Martinez.
           </div>
       </section>
-</body>
+</center></body>
 </html>
+<?php include_once '../../includes/footer.php'?>
