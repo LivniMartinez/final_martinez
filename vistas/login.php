@@ -19,7 +19,7 @@
          <div class="card cascading-right" style="background: hsla(188, 61%, 64%, 0.462);
              backdrop-filter: blur(20px);">
            <div class="card-body p-5 shadow-5 text-center">
-             <h2 class="fw-bold mb-5">Control de Aplicaciones Comando de Informática y Tecnología</h2>
+             <h2 class="fw-bold mb-5">Control de Aplicaciones del Comando de Informática y Tecnología</h2>
              <form>
                <!-- El formulario para registrarse -->
                <div class="row">
@@ -34,7 +34,7 @@
                <!-- catalogo input -->
                <div class="form-outline mb-4">
                  <input type="number" id="number" class="form-control" required/>
-                 <label class="form-label" for="email">Catálogo</label>
+                 <label class="form-label" for="number">Catálogo</label>
                </div>
  
                <!-- Contraseña input -->
