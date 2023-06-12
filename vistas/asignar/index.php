@@ -1,27 +1,15 @@
 <?php include_once '../../includes/header.php'?>
 <?php include_once '../../includes/navbar.php'?>
 <?php
-require '../../modelos/Aplicacion.php';
-require '../../modelos/Programadores.php';
-    try {
-      
-        $app = new Aplicacion();
-        
-        $Aplicacion = $app->buscar();
-     //var_dump($Aplicacion);
-    } catch (PDOException $e) {
-        $error = $e->getMessage();
-    } catch (Exception $e2){
-        $error = $e2->getMessage();
-    }
 
+require '../../modelos/Aplicacion.php';
 try {
   
-    $progra = new Programadores();
+    $tarea = new Aplicacion($_GET);
  
-    $progras = $progra->buscar();
-    //var_dump($progras);
-
+    
+    $tareas = $tarea->buscarT();
+//var_dump($tareas);
 } catch (PDOException $e) {
     $error = $e->getMessage();
 } catch (Exception $e2){
@@ -29,33 +17,60 @@ try {
 }
 
 ?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Resultados</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <table class="table table-bordered table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>NO. </th>
+                            <th>APLICACION</th>
+                            <th>VER</th>
+                          
+                        </tr>
+                    </thead>
+                    <tbody>
+    <?php if (count($tareas) > 0) : ?>
+        <?php foreach ($tareas as $key => $tar) : ?>
+            <tr>
+                <td><?= $key + 1 ?></td>
+                <td><?= $tar['APP_NOMBRE'] ?></td>
+                <td>
+                    <?php if ($tar['APP_ESTADO'] == 2) { ?>
+                        <a class="btn btn-warning w-75%" href="/final_martinez/vistas/detalle/buscar.php?app_id=<?= $tar['APP_ID'] ?>"> ver</a>
+                    <?php } else { ?>
+                        no asignada aún
+                    <?php } ?>
+                </td>
+                
+            </tr>
+        <?php endforeach ?>
+    <?php else : ?>
+        <tr>
+            <td colspan="4">NO EXISTEN REGISTROS</td>
+        </tr>
+    <?php endif ?>
+</tbody>
 
-<div class="container mt-5">
-  <h1 class="text-center mt-3">ASIGNACIÓN DE TAREAS</h1>
-  <div class="row justify-content-center mt-2">
-    <form action="/final_martinez/controladores/asignar/guardar.php" method="POST" class="border border-primary rounded p-3 bg-light col-md-6">
-      <div class="form-group">
-        <label for="aplicacion">Seleccione una aplicación:</label>
-        <select class="form-select" name="asig_app" id="asig_app" required>
-          <option value="">Seleccionar aplicación</option>
-          <?php foreach ($Aplicacion as $apps) { ?>
-            <option value="<?php echo $apps['APP_ID']; ?>"><?php echo $apps['APP_NOMBRE']; ?></option>
-          
-          <?php } ?>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="aplicacion">Seleccione un programador</label>
-        <select class="form-select" name="asig_programador" id="asig_programador" required>
-          <option value="">Seleccionar..</option>
-          <?php foreach ($progras as $apps) { ?>
-            <option value="<?php echo $apps['PROG_ID']; ?>"><?php echo $apps['NOMBRE']; ?></option>
-          <?php } ?>
-        </select>
-      </div>
-
-  
-      <button type="submit" class="btn btn-primary mt-3">Guardar</button>
-    </form>
-  </div>
-</div>
+                </table>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-4">
+                <a href="/final_martinez/vistas/tareas/buscar.php" class="btn btn-info w-100">Volver al formulario</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<?php include_once '../../includes/footer.php'?>
