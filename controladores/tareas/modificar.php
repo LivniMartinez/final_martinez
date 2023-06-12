@@ -1,19 +1,20 @@
 <?php
 require '../../modelos/Tareas.php';
 
-  
+
 if ($_POST != '') {
     try {
     
         $fechaPost = $_POST['tar_fecha'];
         $fechaObjeto = date_create($fechaPost);
-        $fechaFormateada = date_format($fechaObjeto, 'm/d/Y'); 
+        $fechaFormateada = date_format($fechaObjeto, 'd/m/Y'); 
         $datosTareas = $_POST;
         $datosTareas['tar_fecha'] = $fechaFormateada;
         $Tareas = new Tareas($datosTareas);
-//var_dump($Tareas);
+// var_dump($Tareas);
+// exit;
 
-        $resultado = $Tareas->guardar();
+        $resultado = $Tareas->modificar();
         $error = "NO se guardó correctamente";
     } catch (PDOException $e) {
         $error = $e->getMessage();
@@ -21,7 +22,7 @@ if ($_POST != '') {
         $error = $e2->getMessage();
     }
 } else {
-    $error = "Debe llenar todos los datos";
+    $error = "Debe ingresar todos los datos";
 }
 
 ?>
@@ -40,7 +41,7 @@ if ($_POST != '') {
             <div class="col-lg-6">
                 <?php if($resultado): ?>
                     <div class="alert alert-success" role="alert">
-                        Guardado exitosamente!
+                        Modificado exitosamente!
                     </div>
                 <?php else :?>
                     <div class="alert alert-danger" role="alert">
@@ -52,7 +53,7 @@ if ($_POST != '') {
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <a href="/final_martinez/vistas/tareas/index.php" class="btn btn-info">Volver al formulario</a>
+                <a href="/final_martinez/controladores/tareas/buscar.php" class="btn btn-info">Volver al formulario</a>
             </div>
         </div>
     </div>
