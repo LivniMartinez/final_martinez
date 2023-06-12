@@ -1,12 +1,12 @@
 <?php include_once '../../includes/header.php'?>
 <?php include_once '../../includes/navbar.php'?>
 <div class="container mt-5">
-  <h1 class="text-center mt-3">APLICACIONES</h1>
+  <h1 class="text-center mt-3">Formulario para la creación de Aplicaciones</h1>
   <div class="row justify-content-center mt-2">
     <form action="/final_martinez/controladores/aplicacion/guardar.php" method="POST" class="col-lg-8 border bg-light p-3">
       <div class="row mb-3">
         <div class="col">
-          <label for="apli" class="form-label">Ingrese una aplicacion</label>
+          <label for="apli" class="form-label">Ingrese el nombre de la aplicación</label>
           <input type="text" name="app_nombre" id="app_nombre" class="form-control" required>
         </div>
       </div>
