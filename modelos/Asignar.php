@@ -20,6 +20,26 @@ class Asignar extends Conexion {
         $resultado = self::ejecutar($sql);
         return $resultado;
     }
+    
+
+    public function buscarnom() {
+        $sql = "select gra_nombre || ' ' || prog_nombres || ' ' || prog_apellidos AS nombre from asig_programador
+        inner join programadores on asig_programador = prog_id 
+        inner join grados on gra_id = prog_grado
+        where asig_app = 5";
+
+        if ($this->asig_id != null) {
+            $sql .= " WHERE asig_id = $this->asig_id";
+        }
+
+        
+
+        $resultado = self::servir($sql);
+        return $resultado;
+    }
+
+
+
 
     public function buscar() {
         $sql = "SELECT asig_id, asig_programador, asig_app, asig_sit FROM asig_programador";
