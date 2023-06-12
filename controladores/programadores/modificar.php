@@ -1,7 +1,7 @@
 <?php
 require '../../modelos/Programadores.php';
 
-var_dump($_POST);
+//var_dump($_POST);
 if ($_POST != '') {
     try {
      
