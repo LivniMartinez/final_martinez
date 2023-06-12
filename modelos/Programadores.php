@@ -90,6 +90,7 @@ class Programadores extends Conexion {
         return $resultado;
     }
 
+
     public function modificar() {
         $sql = "UPDATE programadores 
                 SET prog_correo = '$this->prog_correo', prog_grado = '$this->prog_grado', 
