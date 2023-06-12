@@ -22,9 +22,11 @@ try {
 
 // Obtener el nombre del programador
 try {
-    $sig_app = $_REQUEST['tar_id'] ?? null;
-    $nombre = new Asignar(['sig_app' => $sig_app]);
+    $asig_app = $_REQUEST['tar_id'] ?? null;
+    $nombre = new Asignar(['asig_app' => $asig_app]);
+
     $nombres = $nombre->buscarnom();
+   // var_dump($nombres);
 } catch (PDOException $e) {
     $error = $e->getMessage();
 } catch (Exception $e2) {
@@ -45,13 +47,18 @@ try {
         }
     }
     $porcentajeTrabajoRealizado = ($totalFinalizadas / $totalTareas) * 100;
+  
+    if (is_nan($porcentajeTrabajoRealizado)){
+       $porcentajeTrabajoRealizado = floatval("0.00");
+    }
+   // var_dump($porcentajeTrabajoRealizado);
 } catch (PDOException $e) {
     $error = $e->getMessage();
 } catch (Exception $e2) {
     $error = $e2->getMessage();
 }
 ?>
-
+mir awts
 <body>
     <div class="container border bg-light py-4 mt-4">
         <h1 class="mt-4">Detalle de Aplicación</h1>
@@ -59,11 +66,11 @@ try {
         <div class="row mt-4">
             <div class="col">
                 <h5>Nombre de Aplicación:</h5>
-                <input type="text" class="form-control" value="<?= $apps[0]['APP_NOMBRE'] ?>">
+                <input type="text" class="form-control" value="<?= $apps[0]['APP_NOMBRE'] ?>" readonly>
             </div>
             <div class="col">
                 <h5>Programador:</h5>
-                <input type="text" class="form-control" value="<?= $nombres[0]['NOMBRE'] ?>">
+                <input type="text" class="form-control" value="<?= $nombres[0]['NOMBRE'] ?>" readonly>
             </div>
         </div>
 

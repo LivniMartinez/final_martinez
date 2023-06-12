@@ -25,6 +25,7 @@ try {
     $error = $e2->getMessage();
 }
 ?>
+si
 
 <div class="container mt-5">
     <h1 class="text-center mt-3">Formulario para modificar el Programador</h1>

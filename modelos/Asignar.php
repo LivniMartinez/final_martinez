@@ -26,7 +26,7 @@ class Asignar extends Conexion {
         $sql = "select gra_nombre || ' ' || prog_nombres || ' ' || prog_apellidos AS nombre from asig_programador
         inner join programadores on asig_programador = prog_id 
         inner join grados on gra_id = prog_grado
-        where asig_app = 5";
+        where asig_app = $this->asig_app";
 
         if ($this->asig_id != null) {
             $sql .= " WHERE asig_id = $this->asig_id";
