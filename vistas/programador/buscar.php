@@ -6,7 +6,7 @@
             <form action="/final_martinez/controladores/programadores/buscar.php" method="GET" class="col-lg-8 border bg-light p-3">
                 <div class="row mb-3">
                     <div class="col">
-                        <label for="prog_nombres">Nombre del Programador</label>
+                        <label for="prog_nombres">Nombre Progamador</label>
                         <input type="text" name="prog_nombres" id="prog_nombres" class="form-control" >
                     </div>
                 </div>
