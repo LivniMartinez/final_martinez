@@ -1,13 +1,13 @@
 <?php include_once '../../includes/header.php'?>
 <?php include_once '../../includes/navbar.php'?>
     <div class="container">
-        <h1 class="text-center">Buscar</h1>
+        <h1 class="text-center">Buscar TAREAS</h1>
         <div class="row justify-content-center">
-            <form action="/final_martinez/controladores/grados/buscar.php" method="GET" class="col-lg-8 border bg-light p-3">
+            <form action="/final_martinez/controladores/tareas/buscar.php" method="GET" class="col-lg-8 border bg-light p-3">
                 <div class="row mb-3">
                     <div class="col">
-                        <label for="gra_nombre">Nombre grado</label>
-                        <input type="text" name="gra_nombre" id="gra_nombre" class="form-control" >
+                        <label for="gra_nombre">Nombre TAREA</label>
+                        <input type="text" name="tar_nombre" id="gra_nombre" class="form-control" >
                     </div>
                 </div>
 
