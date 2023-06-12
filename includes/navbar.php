@@ -76,7 +76,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                    <a class="nav-link  dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
                         Detalle app
                     </a>
                     <ul class="dropdown-menu bg-dark">
