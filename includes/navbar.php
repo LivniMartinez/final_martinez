@@ -28,7 +28,7 @@
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
-                            <a class="nav-link" href="/final_martinez/vistas/programadores/index.php">Crear Programador/Arma</a>
+                            <a class="nav-link" href="/final_martinez/vistas/programadores/index.php">Crear Programador</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/final_martinez/vistas/programadores/buscar.php">Buscar Programador</a>
