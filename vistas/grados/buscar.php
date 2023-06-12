@@ -6,7 +6,7 @@
             <form action="/final_martinez/controladores/grados/buscar.php" method="GET" class="col-lg-8 border bg-light p-3">
                 <div class="row mb-3">
                     <div class="col">
-                        <label for="gra_nombre">Grado y arma del Oficial</label>
+                        <label for="gra_nombre">Grado del Oficial</label>
                         <input type="text" name="gra_nombre" id="gra_nombre" class="form-control" >
                     </div>
                 </div>
