@@ -7,10 +7,13 @@ require '../../modelos/Asignar.php';
 require '../../modelos/Tareas.php';
 
 // Obtener el nombre de la aplicación
+//var_dump($_REQUEST);
 try {
-    $app_id = $_REQUEST['app_id'] ?? null;
+    $app_id = $_REQUEST['tar_id'] ?? null;
     $app = new Aplicacion(['app_id' => $app_id]);
+    //var_dump($app);
     $apps = $app->buscarapp();
+  
 } catch (PDOException $e) {
     $error = $e->getMessage();
 } catch (Exception $e2) {
@@ -19,7 +22,7 @@ try {
 
 // Obtener el nombre del programador
 try {
-    $sig_app = $_REQUEST['app_id'] ?? null;
+    $sig_app = $_REQUEST['tar_id'] ?? null;
     $nombre = new Asignar(['sig_app' => $sig_app]);
     $nombres = $nombre->buscarnom();
 } catch (PDOException $e) {
@@ -30,7 +33,7 @@ try {
 
 // Obtener las tareas y calcular el porcentaje de trabajo realizado
 try {
-    $tar_app = $_REQUEST['app_id'] ?? null;
+    $tar_app = $_REQUEST['tar_id'] ?? null;
     $tarea = new Tareas(['tar_app' => $tar_app]);
     $tare = $tarea->buscartar();
 
