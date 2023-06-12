@@ -7,7 +7,7 @@
             <a class="navbar-brand" href="#">Desarrollo de Apps_Martinez</a>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/final_martinez/vistas/login.php"><i class="ion-ios-mic-off"></i></a>
+                    <a class="nav-link active" aria-current="page" href="/final_martinez/vistas/login.php">Inicio<i class="ion-ios-mic-off"></i></a>
                 </li>
 
                 <li class="nav-item dropdown">
