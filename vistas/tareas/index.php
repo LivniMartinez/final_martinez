@@ -18,7 +18,7 @@ require '../../modelos/Aplicacion.php';
 <div class="container mt-5">
   <h1 class="text-center mt-3">ASIGNACIÓN DE TAREAS</h1>
   <div class="row justify-content-center mt-2">
-    <form action="/ruta_del_controlador" method="POST" class="border border-primary rounded p-3 bg-light col-md-6">
+    <form action="/final_martinez/controladores/tareas/guardar.php" method="POST" class="border border-primary rounded p-3 bg-light col-md-6">
       <div class="form-group">
         <label for="aplicacion">Seleccione una aplicación:</label>
         <select class="form-select" name="tar_app" id="tar_app" required>
